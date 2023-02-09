@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pl">
   <head>
-    <title>Szósta praca domowa</title>
+    <title>Siódma praca domowa</title>
     <meta name="description" content="praca domowa podstawy html" />
     <meta charset="utf-8" />
     <link
@@ -17,7 +17,7 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <div class="modal is-hidden" data-modal>
@@ -29,93 +29,105 @@
         </button>
         <form class="data-form">
           <p>Zostaw swoje dane w formularzu poniżej</p>
-          <div class="form-element">
-            <label class="form-label" for="form-name">Imie</label>
-            <svg class="form-icon">
+          <div class="form">
+            <label class="form__label" for="form-name">Imie</label>
+            <svg class="form__icon">
               <use href="./images/icons.svg#icon-person-black-18dp-1"></use>
             </svg>
             <input
-              class="form-input"
+              class="form__input"
               id="form-name"
               type="text"
               name="id-name"
             />
           </div>
-          <div class="form-element">
-            <label class="form-label" for="form-telephone">Telefon</label>
-            <svg class="form-icon">
+          <div class="form">
+            <label class="form__label" for="form-telephone">Telefon</label>
+            <svg class="form__icon">
               <use href="./images/icons.svg#icon-phone-black-18dp-1"></use>
             </svg>
             <input
-              class="form-input"
+              class="form__input"
               id="form-telephone"
               type="tel"
               name="phone-number"
             />
           </div>
-          <div class="form-element">
-            <label class="form-label" for="form-email">Email</label>
-            <svg class="form-icon">
+          <div class="form">
+            <label class="form__label" for="form-email">Email</label>
+            <svg class="form__icon">
               <use href="./images/icons.svg#icon-email-black-18dp-1"></use>
             </svg>
             <input
-              class="form-input"
+              class="form__input"
               id="form-email"
               type="email"
               name="data-email"
             />
           </div>
-          <label class="form-label" for="form-comments">Komentarz</label>
+          <label class="form__label" for="form-comments">Komentarz</label>
           <textarea
             id="data-form__comments"
             name="comments"
             placeholder="Wprowadź tekst"
           ></textarea>
-          <div class="data-form__checkbox">
+          <div class="form__checkbox">
             <input id="form-declaration" type="checkbox" name="declaration" />
 
-            <label class="form-declaration" for="form-declaration"
+            <label class="form__declaration" for="form-declaration"
               >Oświadczam iż akceptuję <span class="rules">Regulamin</span> i
               <span class="rules">Politykę Prywatności.</span></label
             >
           </div>
-          <button class="data-form__send-button" type="submit">Wyślij</button>
+          <button class="form__send-button" type="submit">Wyślij</button>
         </form>
       </div>
     </div>
-    <header class="borderline">
+    <header class="header--underline">
       <div class="container">
-        <div class="horizontal">
+        <div class="page-header">
           <a class="logo" href="https://webstudio.com" target="_blank"
-            ><span class="web">Web</span
-            ><span class="studio-black">Studio</span></a
+            ><span class="logo--blue">Web</span
+            ><span class="logo--black">Studio</span></a
           >
-          <nav class="navigation-links">
-            <ul class="navigation-item">
-              <li>
-                <a class="navigation-active-site" href="index.html">Agencja</a>
+          <nav>
+            <ul class="navigation">
+              <li class="navigation__item">
+                <a
+                  class="navigation__reference navigation__reference--active"
+                  href="index.html"
+                  >Agencja</a
+                >
               </li>
-              <li>
-                <a href="portfolio.html">Porfolio</a>
+              <li class="navigation__item">
+                <a class="navigation__reference" href="portfolio.html"
+                  >Porfolio</a
+                >
               </li>
-              <li><a href="#Kontakt">Kontakt</a></li>
+              <li class="navigation__item">
+                <a class="navigation__reference" href="#Kontakt">Kontakt</a>
+              </li>
             </ul>
           </nav>
-          <div class="active-data">
-            <div class="envelope">
-              <svg class="tele-icon" width="16" height="12">
+          <div class="contacts">
+            <div class="contacts__mail">
+              <svg class="contacts__icon" width="16" height="12">
                 <use href="./images/icons.svg#icon-envelope"></use>
               </svg>
-              <p class="link-activation">
-                <a href="mailto:info@devstudio.com">info@devstudio.com</a>
+              <p>
+                <a class="contacts__link" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
               </p>
             </div>
-            <div class="smartfone">
-              <svg class="tele-icon" width="10" height="16">
+            <div class="contacts__tel">
+              <svg class="contacts__icon" width="10" height="16">
                 <use href="./images/icons.svg#icon-smartphone"></use>
               </svg>
-              <p class="link-activation">
-                <a href="tel:+48111111111">+48 111 111 111</a>
+              <p>
+                <a class="contacts__link" href="tel:+48111111111"
+                  >+48 111 111 111</a
+                >
               </p>
             </div>
           </div>
@@ -129,13 +141,15 @@
             EFEKTYWNE ROZWIĄZANIA<br />
             DLA WASZEGO BIZNESU
           </h1>
-          <button type="button" data-modal-open>Zamów usługę</button>
+          <button class="main-title__button" type="button" data-modal-open>
+            Zamów usługę
+          </button>
         </div>
       </section>
       <section class="container">
-        <ul class="text-titles">
+        <ul class="strenght">
           <li>
-            <svg class="strenght-icons" width="70" height="70">
+            <svg class="strenght__icons" width="70" height="70">
               <use href="./images/icons.svg#icon-antenna-1"></use>
             </svg>
             <h4>LOREM IPSUM</h4>
@@ -145,7 +159,7 @@
             </p>
           </li>
           <li>
-            <svg class="strenght-icons" width="70" height="70">
+            <svg class="strenght__icons" width="70" height="70">
               <use href="./images/icons.svg#icon-clock-1"></use>
             </svg>
             <h4>LOREM IPSUM</h4>
@@ -155,7 +169,7 @@
             </p>
           </li>
           <li>
-            <svg class="strenght-icons" width="70" height="70">
+            <svg class="strenght__icons" width="70" height="70">
               <use href="./images/icons.svg#icon-diagram-1"></use>
             </svg>
             <h4>LOREM IPSUM</h4>
@@ -165,7 +179,7 @@
             </p>
           </li>
           <li>
-            <svg class="strenght-icons" width="70" height="70">
+            <svg class="strenght__icons" width="70" height="70">
               <use href="./images/icons.svg#icon-astronaut-1"></use>
             </svg>
             <h4>LOREM IPSUM</h4>
@@ -176,11 +190,11 @@
           </li>
         </ul>
       </section>
-      <section class="section">
+      <section class="section advantages">
         <div class="container">
-          <h2 class="section-title">Czym się zajmujemy</h2>
-          <ul class="section-list">
-            <li class="section-list-item">
+          <h2 class="section__title">Czym się zajmujemy</h2>
+          <ul class="advantages__list">
+            <li class="advantages__item">
               <img
                 src="images/box1.jpg"
                 alt="schemat blokowy i ekrany z elementami kodu"
@@ -189,7 +203,7 @@
               />
               <p class="label">APLIKACJE KOMPUTEROWE</p>
             </li>
-            <li class="section-list-item">
+            <li class="advantages__item">
               <img
                 src="images/box2.jpg"
                 alt="laptop i duży ekran z telefonami na nich, ręka z telefonem"
@@ -198,7 +212,7 @@
               />
               <p class="label">APLIKACJE MOBILNE</p>
             </li>
-            <li class="section-list-item">
+            <li class="advantages__item">
               <img
                 src="images/box3.jpg"
                 alt="ręka z tabletem na którym wyświetla się paleta kolorów"
@@ -212,61 +226,61 @@
       </section>
       <section class="team-background section">
         <div class="container">
-          <h2 class="section-title" id="Kontakt">Nasz zespół</h2>
-          <ul class="team-member">
+          <h2 class="section__title" id="Kontakt">Nasz zespół</h2>
+          <ul class="team">
             <li>
               <figure>
                 <img
-                  class="team-member__picture"
+                  class="team__picture"
                   src="images/img.jpg"
                   alt="mężczyzna w okularach z brodą w brązowej koszuli"
                   width="270"
                   height="260"
                 />
-                <figcaption class="team-description">
+                <figcaption>
                   <h4>John Doe</h4>
                   <p>Product Designer</p>
-                  <ul class="social-media">
+                  <ul class="team-sm">
                     <li>
                       <a
-                        class="social-link"
+                        class="team-sm__link"
                         href="https://www.instagram.com/"
                         target="_blank"
                       >
-                        <svg class="social-icon">
+                        <svg class="team-sm__icon">
                           <use href="./images/icons.svg#icon-instagram-2"></use>
                         </svg>
                       </a>
                     </li>
                     <li>
                       <a
-                        class="social-link"
+                        class="team-sm__link"
                         href="https://www.twitter.com/"
                         target="_blank"
                       >
-                        <svg class="social-icon">
+                        <svg class="team-sm__icon">
                           <use href="./images/icons.svg#icon-twitter-1"></use>
                         </svg>
                       </a>
                     </li>
                     <li>
                       <a
-                        class="social-link"
+                        class="team-sm__link"
                         href="https://www.facebook.com/"
                         target="_blank"
                       >
-                        <svg class="social-icon">
+                        <svg class="team-sm__icon">
                           <use href="./images/icons.svg#icon-facebook-1"></use>
                         </svg>
                       </a>
                     </li>
                     <li>
                       <a
-                        class="social-link"
+                        class="team-sm__link"
                         href="https://www.linkedin.com/"
                         target="_blank"
                       >
-                        <svg class="social-icon">
+                        <svg class="team-sm__icon">
                           <use href="./images/icons.svg#icon-linkedin-1"></use>
                         </svg>
                       </a>
@@ -278,56 +292,56 @@
             <li>
               <figure>
                 <img
-                  class="team-member__picture"
+                  class="team__picture"
                   src="images/img1.jpg"
                   alt="bądynka w okularach"
                   width="270"
                   height="260"
                 />
-                <figcaption class="team-description">
+                <figcaption>
                   <h4>John Doe</h4>
                   <p>Frondend Developer</p>
-                  <ul class="social-media">
+                  <ul class="team-sm">
                     <li>
                       <a
-                        class="social-link"
+                        class="team-sm__link"
                         href="https://www.instagram.com/"
                         target="_blank"
                       >
-                        <svg class="social-icon">
+                        <svg class="team-sm__icon">
                           <use href="./images/icons.svg#icon-instagram-2"></use>
                         </svg>
                       </a>
                     </li>
                     <li>
                       <a
-                        class="social-link"
+                        class="team-sm__link"
                         href="https://www.twitter.com/"
                         target="_blank"
                       >
-                        <svg class="social-icon">
+                        <svg class="team-sm__icon">
                           <use href="./images/icons.svg#icon-twitter-1"></use>
                         </svg>
                       </a>
                     </li>
                     <li>
                       <a
-                        class="social-link"
+                        class="team-sm__link"
                         href="https://www.facebook.com/"
                         target="_blank"
                       >
-                        <svg class="social-icon">
+                        <svg class="team-sm__icon">
                           <use href="./images/icons.svg#icon-facebook-1"></use>
                         </svg>
                       </a>
                     </li>
                     <li>
                       <a
-                        class="social-link"
+                        class="team-sm__link"
                         href="https://www.linkedin.com/"
                         target="_blank"
                       >
-                        <svg class="social-icon">
+                        <svg class="team-sm__icon">
                           <use href="./images/icons.svg#icon-linkedin-1"></use>
                         </svg>
                       </a>
@@ -345,50 +359,50 @@
                   width="270"
                   height="260"
                 />
-                <figcaption class="team-description">
+                <figcaption>
                   <h4>John Doe</h4>
                   <p>Marketing</p>
-                  <ul class="social-media">
+                  <ul class="team-sm">
                     <li>
                       <a
-                        class="social-link"
+                        class="team-sm__link"
                         href="https://www.instagram.com/"
                         target="_blank"
                       >
-                        <svg class="social-icon">
+                        <svg class="team-sm__icon">
                           <use href="./images/icons.svg#icon-instagram-2"></use>
                         </svg>
                       </a>
                     </li>
                     <li>
                       <a
-                        class="social-link"
+                        class="team-sm__link"
                         href="https://www.twitter.com/"
                         target="_blank"
                       >
-                        <svg class="social-icon">
+                        <svg class="team-sm__icon">
                           <use href="./images/icons.svg#icon-twitter-1"></use>
                         </svg>
                       </a>
                     </li>
                     <li>
                       <a
-                        class="social-link"
+                        class="team-sm__link"
                         href="https://www.facebook.com/"
                         target="_blank"
                       >
-                        <svg class="social-icon">
+                        <svg class="team-sm__icon">
                           <use href="./images/icons.svg#icon-facebook-1"></use>
                         </svg>
                       </a>
                     </li>
                     <li>
                       <a
-                        class="social-link"
+                        class="team-sm__link"
                         href="https://www.linkedin.com/"
                         target="_blank"
                       >
-                        <svg class="social-icon">
+                        <svg class="team-sm__icon">
                           <use href="./images/icons.svg#icon-linkedin-1"></use>
                         </svg>
                       </a>
@@ -406,50 +420,50 @@
                   width="270"
                   height="260"
                 />
-                <figcaption class="team-description">
+                <figcaption>
                   <h4>John Doe</h4>
                   <p>UI Designer</p>
-                  <ul class="social-media">
+                  <ul class="team-sm">
                     <li>
                       <a
-                        class="social-link"
+                        class="team-sm__link"
                         href="https://www.instagram.com/"
                         target="_blank"
                       >
-                        <svg class="social-icon">
+                        <svg class="team-sm__icon">
                           <use href="./images/icons.svg#icon-instagram-2"></use>
                         </svg>
                       </a>
                     </li>
                     <li>
                       <a
-                        class="social-link"
+                        class="team-sm__link"
                         href="https://www.twitter.com/"
                         target="_blank"
                       >
-                        <svg class="social-icon">
+                        <svg class="team-sm__icon">
                           <use href="./images/icons.svg#icon-twitter-1"></use>
                         </svg>
                       </a>
                     </li>
                     <li>
                       <a
-                        class="social-link"
+                        class="team-sm__link"
                         href="https://www.facebook.com/"
                         target="_blank"
                       >
-                        <svg class="social-icon">
+                        <svg class="team-sm__icon">
                           <use href="./images/icons.svg#icon-facebook-1"></use>
                         </svg>
                       </a>
                     </li>
                     <li>
                       <a
-                        class="social-link"
+                        class="team-sm__link"
                         href="https://www.linkedin.com/"
                         target="_blank"
                       >
-                        <svg class="social-icon">
+                        <svg class="team-sm__icon">
                           <use href="./images/icons.svg#icon-linkedin-1"></use>
                         </svg>
                       </a>
@@ -463,11 +477,11 @@
       </section>
       <section class="section">
         <div class="container">
-          <h2 class="section-title">Nasi klienci</h2>
-          <ul class="customer-name">
+          <h2 class="section__title">Nasi klienci</h2>
+          <ul class="customers">
             <li>
               <a
-                class="customer-links"
+                class="customers__links"
                 href="https://www.ya&co.com/"
                 target="_blank"
               >
@@ -478,7 +492,7 @@
             </li>
             <li>
               <a
-                class="customer-links"
+                class="customers__links"
                 href="https://www.tagline-here/"
                 target="_blank"
               >
@@ -489,7 +503,7 @@
             </li>
             <li>
               <a
-                class="customer-links"
+                class="customers__links"
                 href="https://www.company.com/"
                 target="_blank"
               >
@@ -500,7 +514,7 @@
             </li>
             <li>
               <a
-                class="customer-links"
+                class="customers__links"
                 href="https://www.foster-peters.com/"
                 target="_blank"
               >
@@ -511,7 +525,7 @@
             </li>
             <li>
               <a
-                class="customer-links"
+                class="customers__links"
                 href="https://www.brand.com/"
                 target="_blank"
               >
@@ -522,7 +536,7 @@
             </li>
             <li>
               <a
-                class="customer-links"
+                class="customers__links"
                 href="https://www.tag-line.com/"
                 target="_blank"
               >
@@ -535,19 +549,21 @@
         </div>
       </section>
     </main>
-    <footer class="address-data">
+    <footer class="footer">
       <div class="container">
-        <div class="footer-position">
+        <div class="footer--position">
           <div>
-            <address class="postal-data">
+            <address>
               <a class="logo" href="https://webstudio.com" target="_blank"
-                ><span class="web">Web</span
-                ><span class="studio-white">Studio</span></a
+                ><span class="logo--blue">Web</span
+                ><span class="logo--white">Studio</span></a
               >
-              <p class="postal-adress">m. Warszawa, Aleje Jerozolimskie 21</p>
+              <p class="footer__postal-adress">
+                m. Warszawa, Aleje Jerozolimskie 21
+              </p>
             </address>
 
-            <address class="link-footer">
+            <address class="footer__links">
               <p>
                 <a href="mailto:info@example.com">info@example.com</a>
               </p>
@@ -556,37 +572,33 @@
               </p>
             </address>
           </div>
-          <div class="sm-title">
-            <h4>DOŁĄCZ DO NAS</h4>
-            <ul class="sm-links">
+          <div>
+            <h4 class="footer__sm-title">DOŁĄCZ DO NAS</h4>
+            <ul class="footer__sm-links">
               <li>
-                <a
-                  class="sm-items"
-                  href="https://www.instagram.com/"
-                  target="_blank"
-                >
-                  <svg class="sm-icon">
+                <a href="https://www.instagram.com/" target="_blank">
+                  <svg class="footer__sm-icon">
                     <use href="./images/icons.svg#icon-instagram-2"></use>
                   </svg>
                 </a>
               </li>
               <li>
                 <a href="https://www.twitter.com/" target="_blank">
-                  <svg class="sm-icon">
+                  <svg class="footer__sm-icon">
                     <use href="./images/icons.svg#icon-twitter-1"></use>
                   </svg>
                 </a>
               </li>
               <li>
                 <a href="https://www.facebook.com/" target="_blank">
-                  <svg class="sm-icon">
+                  <svg class="footer__sm-icon">
                     <use href="./images/icons.svg#icon-facebook-1"></use>
                   </svg>
                 </a>
               </li>
               <li>
                 <a href="https://www.linkedin.com/" target="_blank">
-                  <svg class="sm-icon">
+                  <svg class="footer__sm-icon">
                     <use href="./images/icons.svg#icon-linkedin-1"></use>
                   </svg>
                 </a>
@@ -594,7 +606,7 @@
             </ul>
           </div>
           <form class="singup-form">
-            <div class="singup-form__input">
+            <div class="singup-form__position">
               <label for="email-signup">ZAPIS SIĘ DO NEWSLETTERA</label>
               <input
                 id="email-signup"
